@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Your Story Press</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html">
+            <img src="../assets/images/logo.png" alt="Your Story Press logo">
+            <span>
+                <h1>Login</h1>
+                <p>Your Story Press account access</p>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+            <a class="active" href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="simple-page">
+        <h2>Login - Your Story Press</h2>
+
+        <form id="login-form">
+            <fieldset>
+                <legend><b>User Login</b></legend>
+
+                <label>Username:</label>
+                <input type="text" name="username" required>
+
+                <label>Password:</label>
+                <input type="password" name="password" required>
+
+                <label>
+                    <input class="inline-input" type="checkbox" name="remember_me">
+                    Remember me
+                </label>
+
+                <br><br>
+                <input type="submit" value="Login">
+                <input type="reset" value="Clear">
+
+                <div class="notice" id="login-notice"></div>
+            </fieldset>
+
+            <p>New user? <a href="register.html">Create an account</a></p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Your Story Press</p>
+    </footer>
+
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>

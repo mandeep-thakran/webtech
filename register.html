@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Your Story Press</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html">
+            <img src="../assets/images/logo.png" alt="Your Story Press logo">
+            <span>
+                <h1>Register</h1>
+                <p>Create your Your Story Press account</p>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a class="active" href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="simple-page">
+        <h2>Register - Your Story Press</h2>
+
+        <form id="register-form">
+            <fieldset>
+                <legend><b>Personal Information</b></legend>
+
+                <label>First Name:</label>
+                <input type="text" name="firstname" required>
+
+                <label>Last Name:</label>
+                <input type="text" name="lastname" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Phone Number:</label>
+                <input type="tel" name="phone">
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Account Details</b></legend>
+
+                <label>Username:</label>
+                <input type="text" name="username" required>
+
+                <label>Password:</label>
+                <input type="password" name="password" required minlength="4">
+
+                <label>Confirm Password:</label>
+                <input type="password" name="confirm_password" required minlength="4">
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Book Preferences</b></legend>
+
+                <label>Type of Book:</label>
+                <select name="book_type">
+                    <option>Hardcover</option>
+                    <option>Softcover</option>
+                    <option>Digital PDF</option>
+                </select>
+
+                <label>Theme:</label>
+                <select name="theme">
+                    <option>Love</option>
+                    <option>Baby</option>
+                    <option>Grief</option>
+                    <option>Long-Distance</option>
+                    <option>Affirmations</option>
+                </select>
+
+                <p><b>Occasion:</b></p>
+                <label><input class="inline-input" type="radio" name="occasion" value="Birthday"> Birthday</label><br>
+                <label><input class="inline-input" type="radio" name="occasion" value="Anniversary"> Anniversary</label><br>
+                <label><input class="inline-input" type="radio" name="occasion" value="Special Memory"> Special Memory</label><br><br>
+
+                <label>
+                    <input class="inline-input" type="checkbox" name="photos" value="yes">
+                    I want to upload photos later
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Delivery Details</b></legend>
+
+                <label>Address:</label>
+                <textarea name="address" rows="4"></textarea>
+
+                <p><b>Delivery Type:</b></p>
+                <label><input class="inline-input" type="radio" name="delivery" value="Standard"> Standard</label><br>
+                <label><input class="inline-input" type="radio" name="delivery" value="Express"> Express</label>
+            </fieldset>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear Form">
+
+            <div class="notice" id="register-notice"></div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Your Story Press</p>
+    </footer>
+
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>
