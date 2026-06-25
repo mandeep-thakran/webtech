@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Story Press</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/images/logo.png" alt="Your Story Press logo"><span><h1>Your Story Press</h1><p>Turn memories into meaningful books</p></span></a>
+    <nav class="nav">
+        <a class="active" href="index.html">Home</a><a href="#create">Create Your Book</a><a href="#pricing">Pricing</a><a href="#dashboard">My Projects</a><a href="pages/cv.html">CV</a><a href="pages/contact.html">Contact</a><a href="pages/login.html">Login</a><a href="pages/register.html">Register</a>
+    </nav>
+</header>
+<main>
+    <section class="container account-panel">
+        <div class="card account-card">
+            <p id="account-status">You are browsing as a guest.</p>
+            <button id="logout-button" type="button" class="secondary small-btn">Logout</button>
+        </div>
+    </section>
+    <section class="container hero">
+        <div class="hero-card">
+            <p class="eyebrow">Personalized storytelling platform</p>
+            <h2>Turn memories into meaningful books.</h2>
+            <p>Your Story Press helps users answer guided questions, generate a polished story draft, customize the design, and choose a final book format.</p>
+            <div class="hero-actions"><a class="btn" href="#create">Start Your Book</a><a class="btn secondary" href="#how">Watch How It Works</a></div>
+        </div>
+        <div class="hero-logo"><img src="assets/images/logo.png" alt="Your Story Press book and heart logo"></div>
+    </section>
+    <section class="container section offer" id="special-offer">
+        <div class="card offer"><h2>Special Offer</h2><p>Get 20% off on Hardcover Memory Books.</p><p>Offer expires on: <strong><span id="offer-date"></span></strong></p></div>
+    </section>
+    <section class="container section" id="how">
+        <h2>How It Works</h2><p class="section-intro">The process follows the project concept: guided prompts, AI-style story generation, customization, preview, and final format choice.</p>
+        <div class="grid steps">
+            <div class="card step span-3"><h3>Answer Prompts</h3><p>Users write memories, people, occasion and emotion.</p></div>
+            <div class="card step span-3"><h3>Create Story</h3><p>The page generates a polished draft from the answers.</p></div>
+            <div class="card step span-3"><h3>Customize Book</h3><p>Users choose theme, title and book format.</p></div>
+            <div class="card step span-3"><h3>Save Project</h3><p>The draft is saved in the browser dashboard.</p></div>
+        </div>
+    </section>
+    <section class="container section" id="create">
+        <h2>Create Your Book</h2><p class="section-intro">This is the main final-project interaction. It is front-end only, but it shows the real user flow clearly.</p>
+        <div class="grid">
+            <div class="card span-6">
+                <form id="story-form" class="creator-form">
+                    <label>Book Title<input name="title" type="text" placeholder="Example: A Letter for Our Anniversary" required></label>
+                    <label>Receiver<input name="receiver" type="text" placeholder="Example: My partner, my mother, my child" required></label>
+                    <label>Theme<select name="theme"><option value="love">Love</option><option value="baby">Baby</option><option value="grief">Grief</option><option value="long-distance">Long-Distance</option><option value="affirmations">Affirmations</option></select></label>
+                    <label>Book Format<select name="format"><option>Hardcover €65</option><option>Softcover €35</option><option>Digital PDF €20</option></select></label>
+                    <label class="span-12">Main Memory<textarea name="memory" placeholder="Describe the memory you want to turn into a story." required></textarea></label>
+                    <label class="span-12">Emotion<textarea name="emotion" placeholder="What should the receiver feel when reading this book?" required></textarea></label>
+                    <button type="submit">Generate Story</button><button type="button" id="save-project" disabled>Save Draft</button><button type="button" id="submit-book" disabled>Submit Book</button>
+                </form>
+            </div>
+            <div class="card span-6"><h3>Story Preview</h3><div id="story-result" class="result-box">Your generated story preview will appear here.</div></div>
+        </div>
+    </section>
+    <section class="container section" id="pricing">
+        <h2>Choose Your Book Option</h2>
+        <div class="grid">
+            <div class="card span-4"><h3>Hardcover</h3><p class="price">€65</p><p>Premium printed gift book.</p><span class="badge">Best for gifting</span></div>
+            <div class="card span-4"><h3>Softcover</h3><p class="price">€35</p><p>Affordable keepsake for daily memories.</p><span class="badge">Good value</span></div>
+            <div class="card span-4"><h3>Digital PDF</h3><p class="price">€20</p><p>Instant digital version with high flexibility.</p><span class="badge">Fastest option</span></div>
+        </div>
+    </section>
+    <section class="container section" id="dashboard">
+        <h2>My Projects Dashboard</h2><p class="section-intro">Drafts and submitted books are stored with localStorage in this browser. This proves the front-end interaction without needing a backend.</p>
+        <div class="grid">
+            <div class="card span-6">
+                <h3>Saved Drafts</h3>
+                <ul id="dashboard-list" class="dashboard-list"></ul>
+                <button id="clear-projects" type="button">Clear Saved Drafts</button>
+            </div>
+            <div class="card span-6">
+                <h3>Submitted Books</h3>
+                <ul id="submitted-list" class="dashboard-list"></ul>
+                <button id="clear-submissions" type="button">Clear Submitted Books</button>
+            </div>
+        </div>
+    </section>
+</main>
+<div id="help-box" class="help-box"><p><strong>Need help?</strong></p><p>Open the contact page and send the team a message.</p><a href="pages/contact.html">Go to contact</a></div>
+<footer class="site-footer"><p>&copy; 2026 Your Story Press</p><p>Web-based Technologies Final Front-End Project</p></footer>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
